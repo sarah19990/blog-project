@@ -18,5 +18,9 @@ class Post extends Model
         return $this->hasMany(Comment::class);
     }
 
+    public function bookmarkedByUsers(){
+        return $this->belongsToMany(User::class);
+    }
+
     
 }
